@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+  {% if session.data_loaded %}
+
+<style>
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;}
+</style>
+
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+	  <div style="text-align: center;">
+	  {% for link in links %}
+	    	<a href="{{link.href}}"><button href="{{link.href}}" class="button">{{link.label}}</button></a>
+	  {% endfor %}
+	  </div>
+  {% else %}
+    <div class="app-error"> Oops! Data wasn't loaded properly</div>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;}
+</style>
+
+	<div class="imgContainer">
+	<img src="{{ url_for('static',filename='subjectivity.png') }}" >
+	</div>
+	<div class="imgContainer">
+	<img src="{{ url_for('static',filename='polarity.png') }}" >
+	</div>
+<div class="imgContainer">
+	<img src="{{ url_for('static',filename='numberoftweets.png') }}" >
+	</div>
+
+	<div class="imgContainer">
+	<img src="{{ url_for('static',filename='hours.png') }}" >
+	</div>
+  <div class="actions">
+  	<center><a href="/"><button href="/" class="button">Back</button></a></center>
+  </div>
+{% endblock %}

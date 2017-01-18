@@ -1,0 +1,20 @@
+<!doctype html> <html lang="en">
+{% block head %}
+<title>Twitter Analytics</title>
+    <center><img src="{{ url_for('static', filename='twitterlogo.jpg') }}" align="middle" width="20%" height="20%"> </img></center>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+{% endblock %} </head>
+<body >
+<div class=header>
+
+
+</div>
+<div class=page>
+{% block content %}{% endblock %} </div>
+</body>
+
+<div class=footer>
+{% block footer %}
+<span>Ali, Arthur & Wassym</span>
+{% endblock %} </div>
+</html>

@@ -1,0 +1,23 @@
+{% extends "layout.html" %} {% block content %}
+
+<style>
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;}
+</style>
+
+<form action="#" method="post">
+    {{ form.user }}
+    {{ form.hidden_tag() }}
+<input type="submit"/>
+</form>
+<div class="actions">
+    <a href="/"><button href="/" class="button">Back</button></a>
+  </div>
+{% endblock %}

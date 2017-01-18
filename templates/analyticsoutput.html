@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<style>
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;}
+
+.imgContainer{
+    float:left;
+    display: inline-block;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+}
+</style>
+
+<div class="imgContainer">
+        <img src="{{ url_for('static',filename=account+'.png') }}" width="50%" height="50%">
+
+        <img src="{{ url_for('static',filename='wordcloudhashtag'+account+'.png') }}" width="50%" height="50%">
+    </div>
+
+    <div class="imgContainer">
+        <img src="{{ url_for('static',filename= account+'weighted_graph.png') }}" width="50%" height="50%">
+
+        <img src="{{ url_for('static',filename= account+'sentiment.png') }}" width="50%" height="50%">
+
+        <img src="{{ url_for('static',filename= account+'pie.png') }}" >
+    </div>
+
+    <div class="bottom">
+  <div class="actions">
+  	<center><a href="/user"><button href="/user" class="button">Back</button></a></center>
+  </div>
+        </div>
+{% endblock %}
+
+
